@@ -151,6 +151,8 @@ function theme_essential_pluginfile($course, $cm, $context, $filearea, $args, $f
             return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
         } else if ($filearea === 'style') {
             theme_essential_serve_css($args[1]);
+        } else if ($filearea === 'headerbackground') {
+            return $theme->setting_file_serve('headerbackground', $args, $forcedownload, $options);
         } else if ($filearea === 'pagebackground') {
             return $theme->setting_file_serve('pagebackground', $args, $forcedownload, $options);
         } else if (preg_match("/slide[1-9][0-9]*image/", $filearea) !== false) {
@@ -443,6 +445,10 @@ function theme_essential_process_css($css, $theme) {
     $themehovercolor = theme_essential_get_setting('themehovercolor');
     $css = theme_essential_set_color($css, $themehovercolor, '[[setting:themehovercolor]]', '#F32100');
 
+    // Set the theme header text colour.
+    $themetextcolor = theme_essential_get_setting('headertextcolor');
+    $css = theme_essential_set_color($css, $themetextcolor, '[[setting:headertextcolor]]', '#217a94');
+
     // Set the theme icon colour.
     $themeiconcolor = theme_essential_get_setting('themeiconcolor');
     $css = theme_essential_set_color($css, $themeiconcolor, '[[setting:themeiconcolor]]', '#30ADD1');
@@ -532,6 +538,10 @@ function theme_essential_process_css($css, $theme) {
     // Set the background image for the logo.
     $logo = $theme->setting_file_url('logo', 'logo');
     $css = theme_essential_set_logo($css, $logo);
+
+    // Set the background image for the header.
+    $headerbackground = $theme->setting_file_url('headerbackground', 'headerbackground');
+    $css = theme_essential_set_headerbackground($css, $headerbackground);
 
     // Set the background image for the page.
     $pagebackground = $theme->setting_file_url('pagebackground', 'pagebackground');
@@ -683,6 +693,18 @@ function theme_essential_set_alternativecolor($css, $type, $customcolor, $defaul
         $replacement = $defaultcolor;
     } else {
         $replacement = $customcolor;
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+function theme_essential_set_headerbackground($css, $headerbackground) {
+    global $OUTPUT;
+    $tag = '[[setting:headerbackground]]';
+    if ($headerbackground) {
+        $replacement = $headerbackground;
+    } else {
+        $replacement = $OUTPUT->pix_url('bg/header', 'theme');
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;

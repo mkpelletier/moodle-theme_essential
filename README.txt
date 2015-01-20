@@ -164,8 +164,15 @@ New in 2.8.1.1
 - FIX: Issue #422: Regression from #179 in the core_renderer.php file.
 - FIX: Issue #423: Forum floating buttons.
 - FIX: Issue #425: Copyright date localization.
+- FIX: Issue #429: Front page content area set to "Show before login only" still paritally displays.
+- FIX: Issue #432: Adjusted lang string for 'oldnavbardesc'.  Thanks to Mathieu Pelletier (https://github.com/mkpelletier) for this.
+- FIX: Issue #434: Explain if a logo uploaded then no header title will be shown.
+- FIX: Issue #436: Header background colour setting.
 - FIX: Apply MDL-46183.
 - FIX: Apply MDL-45930.
+- FIX: Apply MDL-44907.
+- NEW: Issue #428: Add setting to customise header background image.  Thanks to Jerome Charaoui (https://github.com/jcharaoui) for this.
+- NEW: Issue #433: Add a 'This Course' dropdown menu.  Thanks to ActionJONA (https://github.com/ActionJONA) for the ported BCU theme code.
 
 New in 2.8.1
 ============

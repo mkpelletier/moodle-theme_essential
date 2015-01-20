@@ -208,6 +208,8 @@ $string['allunits'] = 'All units';
 $string['allmodules'] = 'All modules';
 $string['allclasses'] = 'All classes';
 $string['noenrolments'] = 'You have no current enrolments';
+$string['thiscourse'] = 'This course';
+$string['people'] = 'People';
 
 $string['helplinktype'] = 'Enable help link in menu';
 $string['helplinktypedesc'] = 'Choose whether you want to enable a help option in the user menu, you can choose to either provide an URL that will be opened in a new window or an email address.';
@@ -278,6 +280,10 @@ $string['footerhovercolordesc'] = 'Set the colour for your linked text when hove
 $string['footerheadingcolor'] = 'Footer heading colour';
 $string['footerheadingcolordesc'] = 'Set the colour for block headings in the footer.';
 
+$string['headerbackground'] = 'Header background image';
+$string['headerbackgrounddesc'] = 'Upload your own background image.';
+$string['headertextcolor'] = 'Header text colour';
+$string['headertextcolordesc'] = 'Set the text colour for the header.';
 $string['pagebackground'] = 'Page background image';
 $string['pagebackgrounddesc'] = 'Upload your own background image. Select the style of the image below.';
 $string['pagebackgroundstyle'] = 'Page background style';
@@ -457,7 +463,7 @@ $string['instagram'] = 'Instagram URL';
 $string['instagramdesc'] = 'Enter the URL of your Instagram page. (i.e http://instagram.com/mycollege)';
 
 $string['website'] = 'Website URL';
-$string['websitedesc'] = 'Enter the URL of your own website. (i.e http://www.uplearning.nl)';
+$string['websitedesc'] = 'Enter the URL of your own website. (i.e http://about.me/gjbarnard)';
 
 // Category Icons.
 $string['categoryiconheading'] = 'Category icons';
@@ -483,7 +489,7 @@ $string['categoryiconinfodesc'] = 'Enter the name of the icon you wish to use.  
 // Header Settings.
 $string['headerheading'] = 'Header';
 $string['headertitle'] = 'Header title';
-$string['headertitledesc'] = 'Configure here what title to output in the header.';
+$string['headertitledesc'] = 'Configure here what title to output in the header.  Note: The header title will only be used if there is no logo.';
 $string['navbartitle'] = 'Navigation bar title';
 $string['navbartitledesc'] = 'Configure here what title to output in the navigation bar.';
 $string['notitle'] = 'No Title';

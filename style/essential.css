@@ -12351,7 +12351,8 @@ form {
 .mform fieldset.error {
   border: 1px solid #b94a48;
 }
-.mform span.error {
+.mform span.error,
+#adminsettings span.error {
   display: inline-block;
   border: 1px solid #eed3d7;
   border-radius: 4px;
@@ -12372,6 +12373,7 @@ form {
 .mform .fitem .fitemtitle div {
   display: inline;
 }
+#adminsettings span.error,
 .loginpanel .error,
 .mform .error {
   color: #b94a48;
@@ -18725,7 +18727,6 @@ table#greyboxleft h2 {
   position: relative;
   top: 10px;
   margin-right: 10px;
-  color: [[setting:themeiconcolor]];
 }
 #page-header.oldnavbar,
 .pagelayout-maintenance #page-header,
@@ -18899,11 +18900,13 @@ ul.socials li {
 .navbar .navbar-inner #custom_menu_language,
 .navbar .navbar-inner #custom_menu_courses,
 .navbar .navbar-inner #custom_menu_themecolours,
+.navbar .navbar-inner #custom_menu_activitystream,
 .navbar .navbar-inner #custom_menu {
   display: inline-block;
   vertical-align: top;
 }
 .navbar .navbar-inner #custom_menu_courses ul.dropdown-menu,
+.navbar .navbar-inner #custom_menu_activitystream ul.dropdown-menu,
 .navbar .navbar-inner #custom_menu_language ul.dropdown-menu {
   max-height: 384px;
   overflow-y: auto;
@@ -19484,6 +19487,7 @@ body.format-topcoll .course-content ul.ctopics li.section.main {
   .navbar-inner .nav-collapse #custom_menu_language,
   .navbar-inner .nav-collapse #custom_menu_courses,
   .navbar-inner .nav-collapse #custom_menu_themecolours,
+  .navbar-inner .nav-collapse #custom_menu_activitystream,
   .navbar-inner .nav-collapse #custom_menu {
     vertical-align: top;
     float: left;
